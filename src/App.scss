@@ -1,0 +1,34 @@
+.title {
+  font-size: 2.5rem; // Cỡ chữ lớn hơn để nổi bật
+  font-weight: bold; // Chữ đậm để nhấn mạnh
+  text-transform: uppercase; // Viết hoa toàn bộ chữ
+  text-align: center; // Căn giữa tiêu đề
+  color: #333; // Màu chữ xám đậm (giúp dễ đọc)
+  position: relative; // Cho phép thêm hiệu ứng với ::after
+  padding: 10px 250px; // Thêm khoảng cách để tiêu đề không quá sát mép
+  display: inline-block; // Giúp căn chỉnh dễ dàng hơn
+
+  // Thêm một gạch chân đẹp bên dưới tiêu đề
+  &::after {
+    content: ""; // Nội dung trống nhưng vẫn hiển thị
+    width: 50%; // Độ dài của gạch chân (50% độ rộng tiêu đề)
+    height: 4px; // Độ dày của gạch chân
+    background: #3498db; // Màu xanh dương (có thể thay đổi)
+    position: absolute; // Định vị tuyệt đối
+    bottom: -5px; // Dịch xuống dưới tiêu đề một chút
+    left: 50%; // Đặt ở giữa tiêu đề
+    transform: translateX(-50%); // Căn chỉnh chính giữa
+    border-radius: 2px; // Bo góc nhẹ để nhìn mềm mại hơn
+  }
+}
+
+input {
+  display: block;
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+}
