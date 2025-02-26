@@ -22,13 +22,24 @@
   }
 }
 
+.container {
+}
+
 input {
   display: block;
-  width: 50%;
+  width: 20%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
   transition: all 0.3s ease;
   outline: none;
+  position: absolute;
+  right: 40%;
+}
+
+/* Ẩn nút mũi tên trên Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
